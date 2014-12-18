@@ -1,0 +1,41 @@
+{% extends "EzFinlandMainSiteBundle::pagelayout.html.twig" %}
+
+{% block content %}
+
+<div class="nine columns">
+
+<h2>{{ ez_render_field(content,'title') }}</h2>
+
+{{ ez_render_field(content,'content') }}
+
+<hr />
+
+{{ ez_render_field(content,'timestamp') }}
+
+{#
+
+<p>Published {{ ez_render_field(content,'timestamp') }}</p>
+
+{{ ez_render_field(content,'author') }}
+
+#}
+
+</div>
+
+
+
+<aside class="three columns">
+
+	<h5>Latest posts</h5>
+
+	<nav>
+	{{ render(
+	    controller(
+	        "EzFinlandMainSiteBundle:Default:blogPostListing",
+	        {'currentLocationId': currentLocation is defined ? currentLocation.id : null}
+	    )
+	) }}
+	</nav>
+
+</aside>
+{% endblock %}

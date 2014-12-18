@@ -1,0 +1,12 @@
+system:
+    default_sites_group:
+        user:
+            layout: EzFinlandMainSiteBundle::pagelayout.html.twig
+            login_template: eZDemoBundle:Security:login.html.twig
+        location_view:
+            full:
+                article:
+                    controller: "eZDemoBundle:Demo:showArticle"
+                    template: "eZDemoBundle:full:article.html.twig"
+                    match:
+                        Identifier\ContentType: [article]

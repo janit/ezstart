@@ -1,0 +1,48 @@
+
+
+1. Copy files to extension directory
+---------------------------------------------------
+Copy the extension to your /extension directory:
+
+drwxr-xr-x  15 velmu  staff   510 Jun  3 21:50 ezodf
+drwxr-xr-x  16 velmu  staff   544 Jun  3 21:50 ezoe
+drwxrwxrwx   9 velmu  staff   306 Jun 20 12:19 ezwebin
+drwxr-xr-x   6 velmu  staff   204 Aug 22 12:57 html5boilerplate
+
+
+2. Activate the extension (and ezjscore)
+---------------------------------------------------
+Activate the html5boilerplate extension from administration interface
+or via editing settings/siteaccess/yoursite/site.ini.append.php:
+
+[ExtensionSettings]
+ActiveExtensions[]=html5boilerplate
+
+Also make sure the ezjscore extension is also enabled:
+
+ActiveExtensions[]=ezjscore
+
+3. Set html5boilerplate as a design to your siteaccess
+---------------------------------------------------
+
+Edit settings/siteaccess/yoursite/site.ini.append.php to enable the design:
+
+SiteDesign=yourdesign
+AdditionalSiteDesignList[]
+AdditionalSiteDesignList[]=html5boilerplate
+AdditionalSiteDesignList[]=ezwebin
+AdditionalSiteDesignList[]=base
+
+
+4. Clear all caches
+---------------------------------------------------
+
+Use either the admin interface cache clear button or the CLI script:
+
+php bin/php/ezcache.php --clear-all
+
+
+5. Start developing your design
+---------------------------------------------------
+
+Develop yourdesign as you wish.

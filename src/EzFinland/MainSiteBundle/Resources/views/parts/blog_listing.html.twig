@@ -1,0 +1,5 @@
+<ul>
+{% for location in searchHits %}
+	<li><a href="{{ path( 'ez_urlalias', {'locationId': location.valueObject.id}, true ) }}">{{ ez_content_name(location.valueObject.contentInfo) }}</a></li>
+{% endfor %}
+</ul>

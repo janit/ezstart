@@ -1,0 +1,48 @@
+
+system:
+    default:
+        user:
+            layout: eZDemoBundle::pagelayout.html.twig
+            login_template: eZDemoBundle:Security:login.html.twig
+        location_view:
+            full:
+                mainsite_frontpage:
+                    controller: "EzFinlandMainSiteBundle:Demo:showBlogPost"
+                    template: "EzFinlandMainSiteBundle:full:mainsite_frontpage.html.twig"
+                    match:
+                        Identifier\ContentType: [mainsite_frontpage]
+                blog_frontpage:
+                    controller: "EzFinlandMainSiteBundle:Demo:showBlogPost"
+                    template: "EzFinlandMainSiteBundle:full:blog_frontpage.html.twig"
+                    match:
+                        Identifier\ContentType: [blog_frontpage]
+                blog_post:
+                    controller: "EzFinlandMainSiteBundle:Demo:showBlogPost"
+                    template: "EzFinlandMainSiteBundle:full:blog_post.html.twig"
+                    match:
+                        Identifier\ContentType: [blog_post]
+
+        #     line:
+        #         article:
+        #             template: "eZDemoBundle:line:article.html.twig"
+        #             match:
+        #                 Identifier\ContentType: [article]
+        #         blog_post:
+        #             controller: "eZDemoBundle:Demo:showBlogPost"
+        #             template: "eZDemoBundle:line:blog_post.html.twig"
+        #             match:
+        #                 Identifier\ContentType: [blog_post]
+        #         place:
+        #             template: "eZDemoBundle:line:place.html.twig"
+        #             match:
+        #                 Identifier\ContentType: [place]
+        # content_view:
+        #     embed:
+        #         image:
+        #             template: "eZDemoBundle:embed:image.html.twig"
+        #             match:
+        #                 Identifier\ContentType: [image]
+
+        # field_templates:
+        #     - {template: "eZDemoBundle::content_fields.html.twig", priority: 10}
+

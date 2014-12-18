@@ -1,0 +1,5 @@
+system:
+    default:
+        templating:
+            view_layout: "EzFinlandMainSiteBundle::pagelayout.html.twig"
+            module_layout: "eZDemoBundle::pagelayout_legacy.html.twig"

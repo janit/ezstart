@@ -1,0 +1,24 @@
+{% extends "EzFinlandMainSiteBundle::pagelayout.html.twig" %}
+
+{% block content %}
+
+<div class="nine columns">
+
+<h2>{{ ez_render_field(content,'title') }}</h2>
+
+{{ ez_render_field(content,'content') }}
+
+<h3>Latest posts</h3>
+
+<nav>
+{{ render(
+    controller(
+        "EzFinlandMainSiteBundle:Default:blogPostListing",
+        {'currentLocationId': currentLocation is defined ? currentLocation.id : null}
+    )
+) }}
+</nav>
+
+</div>
+
+{% endblock %}

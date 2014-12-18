@@ -1,0 +1,13 @@
+ezpublish:
+    system:
+        default_sites_group:
+            user:
+                layout: XWOA::pagelayout.html.twig
+                login_template: xxx:Security:login.html.twig
+            location_view:
+                full:
+                    blog:
+                        controller: "MetalFranceSiteBundle:Blog:listBlogPosts"
+                        template: "MetalFranceSiteBundle:full:blog.html.twig"
+                        match:
+                            Identifier\ContentType: blog
