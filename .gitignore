@@ -21,6 +21,8 @@
 /web/share
 /web/var
 /web/.htaccess
+/web/css
+/web/js
 composer.phar
 composer.lock
 .buildpath
