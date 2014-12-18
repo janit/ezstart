@@ -11,6 +11,7 @@ Setup a vhost (see doc/) and try these.
 
 Here's something you could try:
 
+```scheme
 CREATE DATABASE ezpublish_fi CHARSET utf8;
 GRANT ALL ON ezpublish_fi.* TO 'ez'@'localhost' IDENTIFIED BY 'eiHelppoo';
 FLUSH PRIVILEGES;
@@ -31,3 +32,4 @@ cd ..
 
 sudo chown -R www-data:www-data ezpublish/{cache,logs,config} ezpublish_legacy/{design,extension,settings,var} web
 sudo find {ezpublish/{cache,logs,config},ezpublish_legacy/{design,extension,settings,var},web} | sudo xargs chmod -R ug+rwX,o+rX
+```
